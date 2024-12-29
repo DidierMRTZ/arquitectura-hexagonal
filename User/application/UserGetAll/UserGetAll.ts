@@ -6,12 +6,11 @@ import { UserCreatedAt } from "../../domain/UserCreatedAt";
 import { UserRepository } from "../../domain/UserRepository";
 
 
-export class UserEdit {
+export class UserGetAll {
     constructor(private repository: UserRepository){}
 
-    async run(id: string, name: string, email: string): Promise<void>{   //se obtiene los primitivos
-        const user = new User(new UserId(id),new UserName(name),new UserEmail(email),new UserCreatedAt(new Date()))
-        return this.repository.edit(user)
+    async run(): Promise<User[]>{   //se obtiene los primitivos
+        return this.repository.getAll()
     }
     
 }
