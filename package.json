@@ -4,7 +4,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "tsc": "tsc"
+    "tsc": "tsc",
+    "start": "node app/main.js",
+    "build": "npx tsc ./src/lib/main.ts --outDir ./app",
+    "dev": "npx ts-node ./src/lib/main.ts"
   },
   "keywords": [],
   "author": "",

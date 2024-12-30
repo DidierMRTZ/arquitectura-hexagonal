@@ -7,7 +7,7 @@ import { UserEmail } from "../domain/UserEmail";
 import { UserCreatedAt } from "../domain/UserCreatedAt";
 
 
-type PostgresUser = {
+export type PostgresUser = {
     id: string
     name: string
     email: string
